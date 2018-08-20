@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tom-security?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&autoReconnect=true&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false
+    username: root
+    password: tom123456
+  session:
+    store-type: none
+
+server:
+  port: 9000
+
+#security:
+#  basic:
+#    enabled: false
+
+tom:
+  security:
+    browser:
+     #login-page: /demo-signIn.html
+     login-type: json
+    validate-code:
+      image:
+        length: 6
+        width: 100
+        #url: /users,/users/*
